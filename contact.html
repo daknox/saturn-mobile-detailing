@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book / Contact | Saturn Mobile Detailing</title>
+  <meta name="description" content="Book a mobile auto detail with Saturn Mobile Detailing, or get in touch for a quote.">
+  <meta property="og:title" content="Book / Contact | Saturn Mobile Detailing">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header (shared — keep in sync across pages) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img src="favicon.svg" alt="" width="34" height="34">
+        Saturn Mobile
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a class="btn btn--primary" href="contact.html">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Book / Contact</span>
+        <h1>Book your detail</h1>
+        <p>Fill out the form and we'll confirm your appointment within [X hours]. Prefer to talk? Call or text anytime.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem;align-items:start">
+
+          <!-- Booking form — TODO: replace YOUR_ID with Formspree form ID (see README) -->
+          <form class="card form" id="booking-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="vehicle">Vehicle type</label>
+                <select id="vehicle" name="vehicle" required>
+                  <option value="">Select…</option>
+                  <option>Sedan / Coupe</option>
+                  <option>Small SUV / Crossover</option>
+                  <option>Large SUV / Minivan</option>
+                  <option>Truck</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="package">Package</label>
+                <select id="package" name="package" required>
+                  <option value="">Select…</option>
+                  <option value="basic">Basic</option>
+                  <option value="full">Full Detail</option>
+                  <option value="premium">Premium</option>
+                  <option value="unsure">Not sure, recommend one</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="date">Preferred date</label>
+                <input id="date" name="date" type="date">
+              </div>
+              <div class="field">
+                <label for="location">Address or area</label>
+                <input id="location" name="location" type="text" autocomplete="street-address">
+              </div>
+            </div>
+            <div class="field">
+              <label for="notes">Anything else? (add-ons, condition, pets, etc.)</label>
+              <textarea id="notes" name="notes"></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Request Appointment</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <!-- Contact details — TODO: real info -->
+          <div>
+            <h2>Get in touch</h2>
+            <ul class="contact-info">
+              <li><strong>Call or text</strong><a href="tel:+10000000000">[Business phone]</a></li>
+              <li><strong>Email</strong><a href="mailto:hello@example.com">[Business email]</a></li>
+              <li><strong>Hours</strong>Mon–Sat: [8am – 6pm]<br>Sun: [By appointment]</li>
+              <li><strong>Service area</strong>[City] and surrounding areas within [XX] miles</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (shared — keep in sync across pages) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html">
+            <img src="favicon.svg" alt="" width="34" height="34">
+            Saturn Mobile
+          </a>
+          <p style="margin-top:0.75rem">Mobile auto detailing that comes to you.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Book / Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:+10000000000">[Business phone]</a></li>
+            <li><a href="mailto:hello@example.com">[Business email]</a></li>
+            <li>[City / service area]</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Follow</h3>
+          <ul>
+            <!-- TODO: social links -->
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google Reviews</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© <span data-year></span> Saturn Mobile Detailing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
