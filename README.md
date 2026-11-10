@@ -6,7 +6,7 @@ Static marketing website for Saturn Mobile Detailing, a mobile auto detailing bu
 
 | File | Page |
 |---|---|
-| `index.html` | Home: hero, services preview, why us, reviews, CTA |
+| `index.html` | Home: hero with 3-step quote form, why us + stats, benefits, process, packages, gallery preview, reviews, FAQ, CTA |
 | `services.html` | Packages and pricing, add-ons, FAQ |
 | `gallery.html` | Before and after photo grid with lightbox |
 | `contact.html` | Booking form and contact info |
@@ -25,14 +25,15 @@ npx serve .
 
 - **Placeholders:** search the project for `[` and `TODO` to find everything that needs real business info (phone, email, city, prices, reviews).
 - **Header and footer** are copied into all four HTML files. When you change one, update it in each page.
-- **Colors and fonts:** edit the variables in `:root` at the top of `css/styles.css`.
+- **Brand:** logos, favicons and color tokens live in `brand/` (see `brand/BRAND.md`). The site uses the dark theme and the `brand/logos/dark/` logo set. Never redraw or recolor the logo.
+- **Colors and fonts:** come from `brand/tokens/tokens.css`. Style with the semantic variables (`--bg`, `--fg`, `--accent`, `--surface`, `--border`, `--fg-muted`), not raw hex. Site-only values (container width, header height) are in `:root` at the top of `css/styles.css`.
 - **Photos:** see `assets/images/README.md`.
 
 ## Booking form setup (Formspree)
 
 1. Create a free account at https://formspree.io and make a new form.
 2. Copy the form ID (the part after `/f/`).
-3. In `contact.html`, replace `YOUR_ID` in the form's `action` URL.
+3. Replace `YOUR_ID` in the form `action` URL in `contact.html` (booking form) and `index.html` (hero quote form).
 
 Submissions are emailed to the account owner. Links like `contact.html?package=full` preselect the package.
 
